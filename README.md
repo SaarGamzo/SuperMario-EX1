@@ -1,25 +1,28 @@
-# Exercise no.1:
+# Exercise No. 1
 
-###  Specifics:
+## Specifics:
 1. Adjustable number of rows (4-8) and columns (3-5).
 2. Adjustable game speed (1-5).
 3. Player that can move left and right.
 4. Obstacles on the road.
-5. Obstacles come at a constant speed on the road (obstacles comes towards player)
-6. Crash notification - toast message + vibration
-7. 3 lives
-8. Endless game - game continues even after 3 crashes
+5. Obstacles come at a constant speed on the road (obstacles come towards the player).
+6. Crash notification - toast message + vibration.
+7. 3 lives.
+8. Endless game - the game continues even after 3 crashes.
 
-### Using onPause - when exiting the app, it freezes.
-### Using onResume - when returning to the app, it continues from where it paused.
-### Using Timer - for sceduled appearance of the obstacles.
-### Using Vibrator & Toast - for every crash.
+## Game Flow:
+- **OnPause:** Freezes when exiting the app.
+- **OnResume:** Continues from where it paused when returning to the app.
+- **Timer:** Scheduled appearance of obstacles.
+- **Vibrator & Toast:** Used for every crash.
 
-## Main menu screen:
-`![](main.jpeg)`
+## Screenshots:
 
-## Settings screen:
-`![](settings.jpeg)`
+### Main Menu Screen:
+![Main Menu](main.jpeg)
 
-## Game screen:
-`!(ingame.jpeg)`
+### Settings Screen:
+![Settings](settings.jpeg)
+
+### Game Screen:
+![In-Game](ingame.jpeg)
