@@ -19,10 +19,10 @@
 ## Screenshots:
 
 ### Main Menu Screen:
-![Main Menu](main.jpeg)
+<img src="main.jpeg" alt="Main Menu" width="200"/>
 
 ### Settings Screen:
-![Settings](settings.jpeg)
+<img src="settings.jpeg" alt="Settings" width="200"/>
 
 ### Game Screen:
-![In-Game](ingame.jpeg)
+<img src="ingame.jpeg" alt="In-Game" width="200"/>
