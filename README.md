@@ -16,10 +16,10 @@
 ### Using Vibrator & Toast - for every crash.
 
 ## Main menu screen:
-![Alt text]("./main.jpeg")
+`![](main.jpeg)`
 
 ## Settings screen:
-![Alt text]("./settings.jpeg)
+`![](settings.jpeg)`
 
 ## Game screen:
-![Alt text]("./ingame.jpeg")
+`!(ingame.jpeg)`
