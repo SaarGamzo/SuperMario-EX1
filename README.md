@@ -20,4 +20,4 @@
 
 | Main Menu | Settings | In-Game |
 | --- | --- | --- |
-| ![Main Menu](main.jpeg =200x) | ![Settings](settings.jpeg =200x) | ![In-Game](ingame.jpeg =200x) |
+| <img src="main.jpeg" alt="Main Menu" width="200"/> | <img src="settings.jpeg" alt="Settings" width="200"/> | <img src="ingame.jpeg" alt="In-Game" width="200"/> |
