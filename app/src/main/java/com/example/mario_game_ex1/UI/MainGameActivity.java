@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -97,10 +96,9 @@ public class MainGameActivity extends Activity {
             public void run() {
                 // Calculate the dimensions of the table
                 int screenWidth = getResources().getDisplayMetrics().widthPixels;
-                int screenHeight = SCREENHEIGHTBETWEENLAYOUTS;
                 // Set images sizes equaly
                 int imageWidth = screenWidth / COLS;
-                int imageHeight = screenHeight / ROWS;
+                int imageHeight = SCREENHEIGHTBETWEENLAYOUTS / ROWS;
                 // Clear any existing views
                 main_game_TBL_matrix.removeAllViews();
                 for (int row = 0; row < ROWS; row++) {
@@ -152,9 +150,7 @@ public class MainGameActivity extends Activity {
 
     // if player and opponent meet - show a toast & vibrate if enabled
     private void playerCrashed() {
-        Toast toast = Toast.makeText(this, "Damn!", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL, 0, 0);
-        toast.show();
+        Toast.makeText(this, "Damn!", Toast.LENGTH_SHORT).show();
         if(isVibrator){
             vibrate();
         }
