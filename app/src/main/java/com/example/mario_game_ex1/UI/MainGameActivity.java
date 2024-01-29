@@ -1,20 +1,20 @@
 package com.example.mario_game_ex1.UI;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
+import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.view.Gravity;
-
-import androidx.appcompat.app.AlertDialog;
 
 import com.example.mario_game_ex1.Logic.GameManager;
 import com.example.mario_game_ex1.Logic.GameTool;
@@ -236,6 +236,13 @@ public class MainGameActivity extends Activity {
 
     // vibrate phone in case of crash
     private void vibrate() {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            v.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.EFFECT_HEAVY_CLICK));
+        }
+        else{
+            v.vibrate(200);
+        }
     }
 
     @Override
