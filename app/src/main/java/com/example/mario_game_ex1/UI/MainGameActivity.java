@@ -64,7 +64,7 @@ public class MainGameActivity extends Activity {
         play(); // play game function
     }
 
-    private void setListeners(){
+    private void setListeners() {
         main_game_BTN_right.setOnClickListener(view -> movePlayerRight()); // set right button listener
         main_game_BTN_left.setOnClickListener(view -> movePlayerLeft()); // set left button listener
     }
@@ -85,7 +85,7 @@ public class MainGameActivity extends Activity {
                 // Schedule the next iteration
                 play();
             }
-        }, (SECINTERVAL - (GAMESPEED*100)));
+        }, (SECINTERVAL - (GAMESPEED * 100)));
     }
 
 
@@ -114,11 +114,11 @@ public class MainGameActivity extends Activity {
                         if (board[row][col] == null) { // if cell is empty
                             imageView.setImageResource(android.R.color.transparent);
                         } else {
-                            if (board[row][col]instanceof Player) { // if cell is a player
+                            if (board[row][col] instanceof Player) { // if cell is a player
                                 imageView.setImageResource(R.drawable.mario);
-                            } else if(board[row][col]instanceof Opponent) { // if cell is opponent (not relevant at start)
+                            } else if (board[row][col] instanceof Opponent) { // if cell is opponent (not relevant at start)
                                 imageView.setImageResource(R.drawable.opponent);
-                            } else if(board[row][col]instanceof Reviver){
+                            } else if (board[row][col] instanceof Reviver) {
                                 imageView.setImageResource(R.drawable.star);
                             }
                         }
@@ -151,7 +151,7 @@ public class MainGameActivity extends Activity {
     // if player and opponent meet - show a toast & vibrate if enabled
     private void playerCrashed() {
         Toast.makeText(this, "Damn!", Toast.LENGTH_SHORT).show();
-        if(isVibrator){
+        if (isVibrator) {
             vibrate();
         }
     }
@@ -169,9 +169,9 @@ public class MainGameActivity extends Activity {
         syncHeartsWithStrikes();
     }
 
-    private void syncHeartsWithStrikes(){
+    private void syncHeartsWithStrikes() {
         int strikes = gameMan.getStrikes();
-        switch (strikes){
+        switch (strikes) {
             case 0:
                 main_game_IMG_hearts[0].setVisibility(View.VISIBLE);
                 main_game_IMG_hearts[1].setVisibility(View.VISIBLE);
@@ -205,10 +205,10 @@ public class MainGameActivity extends Activity {
         if (cellValue == null) {
             // Set an empty cell image
             imageView.setImageResource(android.R.color.transparent);
-        } else if (board[row][col] instanceof  Player) {
+        } else if (board[row][col] instanceof Player) {
             // Set Player
             imageView.setImageResource(R.drawable.mario);
-        } else if (board[row][col] instanceof  Opponent) {
+        } else if (board[row][col] instanceof Opponent) {
             // Set Opponent
             imageView.setImageResource(R.drawable.opponent);
         } else if (board[row][col] instanceof Reviver) {
@@ -233,10 +233,9 @@ public class MainGameActivity extends Activity {
     // vibrate phone in case of crash
     private void vibrate() {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             v.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.EFFECT_HEAVY_CLICK));
-        }
-        else{
+        } else {
             v.vibrate(200);
         }
     }
@@ -251,6 +250,7 @@ public class MainGameActivity extends Activity {
         isGamePaused = true;
         showPauseDialog();
     }
+
     // Call this method when you want to resume the game
     private void resumeGame() {
         isGamePaused = false;
@@ -287,14 +287,15 @@ public class MainGameActivity extends Activity {
 
     // Call this method when you want to quit the game
     private void quitGame() {
-         Intent intent = new Intent(MainGameActivity.this, MainMenuActivity.class);
-         startActivity(intent);
+        handler.removeCallbacksAndMessages(null);
+        Intent intent = new Intent(MainGameActivity.this, MainMenuActivity.class);
+        startActivity(intent);
         finish();
     }
+
     // Remove any remaining callbacks to prevent memory leaks
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }
