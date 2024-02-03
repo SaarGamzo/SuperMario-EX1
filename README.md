@@ -23,4 +23,5 @@
 | <img src="media/main.jpeg" alt="Main Menu" width="200"/> | <img src="media/settings.jpeg" alt="Settings" width="200"/> | <img src="media/ingame.jpeg" alt="In-Game" width="200"/> |
 
 ## Video Preview:
-https://github.com/SaarGamzo/SuperMario-EX1/blob/master/Mario-Game-Preview.mp4
+
+https://github.com/SaarGamzo/SuperMario-EX1/assets/88244818/9d6843d0-1cc6-452c-919a-dc1954cfe2c1
