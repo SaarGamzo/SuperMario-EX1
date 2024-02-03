@@ -21,3 +21,6 @@
 | Main Menu | Settings | In-Game |
 | --- | --- | --- |
 | <img src="main.jpeg" alt="Main Menu" width="200"/> | <img src="settings.jpeg" alt="Settings" width="200"/> | <img src="ingame.jpeg" alt="In-Game" width="200"/> |
+
+## Video Preview:
+https://github.com/SaarGamzo/SuperMario-EX1/blob/master/Mario-Game-Preview.mp4
